@@ -15,6 +15,7 @@
 	stylus			//简化css语法插件
 	stylus-loader
 	FastClick		//解决用户点击屏幕大约延迟300毫秒后才会触发点击事件问题
+	vue-awesome-swiper	//vueSwiper插件
 
 ## 其他方面
 
