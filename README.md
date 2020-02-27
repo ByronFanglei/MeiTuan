@@ -1,4 +1,4 @@
-# meituan
+# Meituan
 
 > A Vue.js project
 ## 简介
@@ -17,6 +17,25 @@
 	FastClick		//解决用户点击屏幕大约延迟300毫秒后才会触发点击事件问题
 	vue-awesome-swiper	//vueSwiper插件
 
+## 算法方面
+index-icons页面
+  轮播页面算法:
+
+  ```
+  computed: {
+    pages () {
+      const pages = []
+      this.iconList.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
+    }
+  }
+  ```
 ## 其他方面
 
 多页面应用（返回html）
