@@ -17,11 +17,11 @@
 	FastClick		//解决用户点击屏幕大约延迟300毫秒后才会触发点击事件问题
 	vue-awesome-swiper	//vueSwiper插件
 
-## 算法方面
+### 单个页面要点内容
 index-icons页面
   轮播页面算法:
 
-  ```
+  ```javascript
   computed: {
     pages () {
       const pages = []
@@ -35,6 +35,19 @@ index-icons页面
       return pages
     }
   }
+  ```
+index-recommended页面
+  当网络较慢时加载页面时，下方字体可能会提前比上方图片预先加载，此时字体极有可能在图片位置停留，影响用户体验，采用以下方法解决：
+
+  ```css
+	height: 0
+	padding-bottom: 50%  //高比宽的值，当页面加载直接保留图片的位置
+  ```
+  内容溢出省略号（自己老是记不住哇记不住）
+  ```css
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
   ```
 ## 其他方面
 
