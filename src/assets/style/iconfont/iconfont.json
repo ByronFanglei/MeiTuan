@@ -6,6 +6,13 @@
   "description": "vue美团网",
   "glyphs": [
     {
+      "icon_id": "525998",
+      "name": "坐标",
+      "font_class": "zuobiao",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
       "icon_id": "608317",
       "name": "箭头",
       "font_class": "jiantouarrow483",
