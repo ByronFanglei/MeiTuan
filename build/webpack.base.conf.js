@@ -32,7 +32,9 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
+    // 自动补全的扩展名
     extensions: ['.js', '.vue', '.json'],
+    // 默认路径代理
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),

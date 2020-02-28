@@ -1,8 +1,10 @@
 <template>
   <div class="header">
-    <div class="header-left">{{this.city}}
-      <span class="iconfont lefticon">&#xe695;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-left">{{this.city}}
+        <span class="iconfont lefticon">&#xe695;</span>
+      </div>
+    </router-link>
     <div class="header-input">
       <span class="iconfont">&#xeb9c;</span>
       请输入商家名、品类或者商圈...
@@ -17,14 +19,15 @@
   @import '~style/varibles.styl'
   .header
     display: flex
-    height: 1.01rem
-    line-height: 1.01rem
+    height: $headerHeight
+    line-height: $headerHeight
     background-color: $bgColor
     font-size: .26rem
     .header-left
       width: 1.508rem
       float: left
       text-align: center
+      color: $darkFontColor
       .lefticon
         width: 0.16rem
         height: 0.09rem

@@ -14,6 +14,7 @@ iconfont		//字体图标
 ```
 ### 插件
 	vue.cil			//vue脚手架
+	Eslink			//JavaScript检查语法
 	stylus			//简化css语法插件
 	stylus-loader
 	FastClick		//解决用户点击屏幕大约延迟300毫秒后才会触发点击事件问题
@@ -21,7 +22,7 @@ iconfont		//字体图标
 	axios			//vue推荐ajax，可以实现跨平台
 
 ### 单个页面要点内容
-index-icons页面
+#### index-icons页面
   轮播页面算法:
 
   ```javascript
@@ -39,7 +40,7 @@ index-icons页面
     }
   }
   ```
-index-recommended页面
+#### index-recommended页面
   当网络较慢时加载页面时，下方字体可能会提前比上方图片预先加载，此时字体极有可能在图片位置停留，影响用户体验，采用以下方法解决：
 
   ```css
@@ -52,7 +53,7 @@ index-recommended页面
 	white-space: nowrap
 	text-overflow: ellipsis
   ```
-index-ajax方面
+#### index-ajax方面
   ajax方式：fetch，vue-resource,axios(vue官方推荐，可以实现跨平台)
 
   ```bash
@@ -62,6 +63,8 @@ index-ajax方面
   ```
   swiper页面：
     用空数组进行创建时，初始渲染页面内容为最后一项，需要进行数组长度判定，为空不创建，否则再创建
+
+
 
 ## 其他方面
 
