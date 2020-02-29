@@ -12,6 +12,7 @@ reset.css		//格式化css
 border.css		//解决border 1px问题
 iconfont		//字体图标
 css页面引入其他文件需要在前面添加 ~
+css BFC概念
 ```
 ### 插件
 	vue.cil			//vue脚手架
@@ -65,6 +66,9 @@ css页面引入其他文件需要在前面添加 ~
   ```
   swiper页面：
     用空数组进行创建时，初始渲染页面内容为最后一项，需要进行数组长度判定，为空不创建，否则再创建
+
+####  city-ajax方面
+  v-for可以循环数组，对象，循环对象有两个值(item,key)，item是key对应的数组，item可以再次进行循环
 
 
 

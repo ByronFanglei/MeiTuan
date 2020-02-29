@@ -25,6 +25,10 @@
 			"id": 125,
 			"spell": "guilin",
 			"name": "桂林"
+		}, {
+			"id": 126,
+			"spell": "guilin",
+			"name": "山西"
 		}],
 		"cities": {
 			"A": [{
