@@ -21,6 +21,7 @@ css页面引入其他文件需要在前面添加 ~
 	FastClick		//解决用户点击屏幕大约延迟300毫秒后才会触发点击事件问题
 	vue-awesome-swiper	//vueSwiper插件
 	axios			//vue推荐ajax，可以实现跨平台
+	better-scroll	//页面滑动插件
 
 ### 单个页面要点内容
 #### index-icons页面

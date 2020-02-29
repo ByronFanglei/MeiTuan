@@ -9,10 +9,9 @@
   .search
     height: .78rem
     padding: .1rem 0 .1rem
-    // background: $bgColor
-    border-top: 1px solid #eee
+    background: $cityBgcolor
     .search-input
-      width: 90%
+      width: 95%
       display: table
       // vertical-align: middle
       margin 0 auto
