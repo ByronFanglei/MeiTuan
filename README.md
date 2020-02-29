@@ -11,6 +11,7 @@
 reset.css		//格式化css
 border.css		//解决border 1px问题
 iconfont		//字体图标
+css页面引入其他文件需要在前面添加 ~
 ```
 ### 插件
 	vue.cil			//vue脚手架
