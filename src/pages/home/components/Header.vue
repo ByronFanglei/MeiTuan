@@ -24,7 +24,7 @@
     background-color: $bgColor
     font-size: .26rem
     .header-left
-      width: 1.508rem
+      min-width: 1.508rem
       float: left
       text-align: center
       color: $darkFontColor
@@ -49,10 +49,13 @@
 </style>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    // ...展开运算符
+    // vue高级用法
+    ...mapState(['city'])
   }
 }
 </script>

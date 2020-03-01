@@ -7,7 +7,9 @@
       <ul>
         <li v-for="item of list"
             :key="item.id"
-            class="search-item border-bottom">{{item.name}}</li>
+            class="search-item border-bottom"
+            @click="handChangeCity(item.name)"
+            >{{item.name}}</li>
         <li class="search-item border-bottom" v-show="isList">未匹配到对应城市</li>
       </ul>
     </div>
@@ -51,6 +53,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+import { mapMutations } from 'vuex'
 export default {
   name: 'CitySearch',
   props: {
@@ -96,7 +99,16 @@ export default {
   methods: {
     getinput () {
       this.texts = 'texts'
-    }
+    },
+    handChangeCity (city) {
+      // this.$store.commit('changeCity', city)
+      // vue高级用法
+      this.changeCity(city)
+      this.$router.push('/')
+      this.keyword = ''
+    },
+    // vue高级用法
+    ...mapMutations(['changeCity'])
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.search)

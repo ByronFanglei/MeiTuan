@@ -23,6 +23,7 @@ css BFC概念
 	vue-awesome-swiper	//vueSwiper插件
 	axios			//vue推荐ajax，可以实现跨平台
 	better-scroll	//页面滑动插件
+	vuex			//数据共享
 
 ### 单个页面要点内容
 #### index-icons页面
@@ -81,6 +82,11 @@ let && const && var用法：
     touchstart：手指按下
     touchmove：手指按下并移动
     touchend：手指松开
+
+####  city-vuex方面
+![vuex](https://vuex.vuejs.org/vuex.png)
+vuex高级用法：
+  ...:展开运算符
 
 ## 其他方面
 
