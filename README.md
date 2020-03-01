@@ -87,7 +87,10 @@ let && const && var用法：
 ![vuex](https://vuex.vuejs.org/vuex.png)
 vuex高级用法：
   ...:展开运算符
-
+  
+#### city-keepalive方面
+  localStorage缓存使用类似cookie不会自己消失
+  city页面优化，当选择新城市时才会重新发送ajax否则使用缓存ajax
 ## 其他方面
 
 多页面应用（返回html）
