@@ -70,7 +70,17 @@ css BFC概念
 ####  city-ajax方面
   v-for可以循环数组，对象，循环对象有两个值(item,key)，item是key对应的数组，item可以再次进行循环
 
-
+####  city-components方面
+let && const && var用法
+  const定义的变量不可以修改，而且必须初始化
+  var定义的变量可以修改，如果不初始化会输出undefined，不会报错
+  let是块级作用域，函数内部使用let定义后，对函数外部无影响
+手指滑动逻辑
+  *查看代码注释*
+  主要参数：
+    touchstart：手指按下
+    touchmove：手指按下并移动
+    touchend：手指松开
 
 ## 其他方面
 

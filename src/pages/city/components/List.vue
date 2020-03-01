@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item,key) of cities" :key="key">
+      <div class="area" v-for="(item,key) of cities" :key="key" :ref="key">
         <div class="title">{{key}}</div>
         <div class="button-all">
           <div class="button-one border-bottom"
@@ -74,7 +74,18 @@ export default {
   name: 'CityList',
   props: {
     hot: Array,
-    cities: Object
+    cities: Object,
+    letter: String
+  },
+  watch: {
+    // （3）通过props接受父组件传值，并通过watch监听值是否发生变化,通过scroll.scrollToElement函数指向到指定位置(自此点击活动到对应字母完毕)
+    letter () {
+      if (this.letter) {
+        // 获取指定字母对应的list的DOM
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)

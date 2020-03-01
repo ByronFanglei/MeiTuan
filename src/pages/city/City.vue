@@ -2,8 +2,15 @@
   <div class="babys">
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hot="hotcitys"></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-list
+          :cities="cities"
+          :hot="hotcitys"
+          :letter="letter"
+          ></city-list>
+    <city-alphabet
+          :cities="cities"
+          @change="getAlphabet"
+          ></city-alphabet>
   </div>
 </template>
 
@@ -22,7 +29,8 @@ export default {
   data () {
     return {
       cities: {},
-      hotcitys: []
+      hotcitys: [],
+      letter: ''
     }
   },
   components: {
@@ -43,6 +51,11 @@ export default {
         this.cities = data.cities
         this.hotcitys = data.hotCities
       }
+    },
+    getAlphabet (letter) {
+      // （2）父组件接受子组件change并调用函数，参数为子组件返回值
+      //  定义data中letter为子组件传值，通过data传值给另一个子组件
+      this.letter = letter
     }
   },
   mounted: function () {
