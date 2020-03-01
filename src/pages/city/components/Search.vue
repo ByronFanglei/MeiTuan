@@ -1,6 +1,16 @@
 <template>
-  <div class="search">
-    <input  type="text" :class="[SearchInput,texts]" placeholder="请输入城市" @click="getinput" />
+  <div>
+    <div class="search">
+      <input v-model="keyword"  type="text" :class="[SearchInput,texts]" placeholder="请输入城市或拼音" @click="getinput" />
+    </div>
+    <div class="search-login" ref="search" v-show="keyword">
+      <ul>
+        <li v-for="item of list"
+            :key="item.id"
+            class="search-item border-bottom">{{item.name}}</li>
+        <li class="search-item border-bottom" v-show="isList">未匹配到对应城市</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -23,21 +33,73 @@
       color: $darkFontColor
     .texts
       text-align: center
+  .search-login
+    overflow: hidden
+    z-index: 1
+    background: #eee
+    position: absolute
+    top: 1.86rem
+    left: 0
+    right: 0
+    bottom: 0
+    .search-item
+      background: #fff
+      color: $darkFontColor
+      padding-left: .2rem
+      line-height: .62rem
 </style>
 
 <script>
+import Bscroll from 'better-scroll'
 export default {
   name: 'CitySearch',
+  props: {
+    cities: Object
+  },
   data () {
     return {
       texts: '',
-      SearchInput: 'search-input'
+      SearchInput: 'search-input',
+      keyword: '',
+      list: [],
+      timer: null
+    }
+  },
+  computed: {
+    isList () {
+      return !this.list.length
+    }
+  },
+  watch: {
+    keyword () {
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      if (!this.keyword) {
+        this.list = []
+        return
+      }
+      this.timer = setTimeout(() => {
+        const result = []
+        for (let i in this.cities) {
+          this.cities[i].forEach((value) => {
+            if (value.name.indexOf(this.keyword) > -1 ||
+                value.spell.indexOf(this.keyword) > -1) {
+              result.push(value)
+            }
+          })
+        }
+        this.list = result
+      }, 100)
     }
   },
   methods: {
     getinput () {
       this.texts = 'texts'
     }
+  },
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.search)
   }
 }
 </script>
