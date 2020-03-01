@@ -2,7 +2,13 @@
   <div>
     <div class="title">猜你喜欢</div>
     <ul>
-      <li class="item" v-for="item of list" :key="item.id">
+      <router-link
+          tar="li"
+          class="item"
+          v-for="item of list"
+          :key="item.id"
+          :to="'/detail/' + item.id"
+          >
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -10,7 +16,7 @@
           <p class="item-price">{{item.price}}元</p>
           <button class="item-button">查看详情</button>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>

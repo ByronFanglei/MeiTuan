@@ -20,7 +20,7 @@ css BFC概念
 	stylus			//简化css语法插件
 	stylus-loader
 	FastClick		//解决用户点击屏幕大约延迟300毫秒后才会触发点击事件问题
-	vue-awesome-swiper	//vueSwiper插件
+	vue-awesome-swiper	//vueSwiper插件 对象前记得加 .
 	axios			//vue推荐ajax，可以实现跨平台
 	better-scroll	//页面滑动插件
 	vuex			//数据共享
@@ -87,7 +87,7 @@ let && const && var用法：
 ![vuex](https://vuex.vuejs.org/vuex.png)
 vuex高级用法：
   ...:展开运算符
-  
+
 #### city-keepalive方面
   localStorage缓存使用类似cookie不会自己消失
   city页面优化，当选择新城市时才会重新发送ajax否则使用缓存ajax
