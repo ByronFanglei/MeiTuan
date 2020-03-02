@@ -113,6 +113,13 @@ scrollBehavior (to, from, savedPosition) {
 #### detail-list方面
 vue递归的使用
 
+组件name三个途径
+1.递归组件会使用到它
+```vue
+2.<keep-alive exclude="Detail">
+```
+3.vue-devtools 中显示组件名
+
 #### detail-ajax方面
 解决进入美食详情页面路由缓存问题
 ```vue
@@ -120,6 +127,19 @@ vue递归的使用
 </keep-alive>
 ```
 但是会引入新的问题，detail-header方面滚动借用keepalive路由产生的两个钩子进行调用函数，所以detail-header页面需要把activated，deactivated两个钩子替换为mounted，unmounted钩子，便解决问题
+
+#### text-all方面
+该分支主要目的为：项目上线基于webpack打包
+```bash
+// 打包代码
+npm run build
+```
+1.json数据在后台，本地启动"npm run start" 然后电脑访问“http://localhost:8080” ,手机访问本地ip:8080，切记package.json文件记得加--host 0.0.0.0，否则无法用ip访问
+2.数据全部打包上线，放入WWW目录下，电脑访问localhost后，手机再访问本地ip即可访问，切记，先电脑，后手机，否则无法访问
+
+打包文件默认为dist文件包，可以修改名字，但切记需要在config/index.js的build修改打包后要运行的名字，否则无法运行。
+
+
 
 ## 其他方面
 
@@ -130,17 +150,6 @@ vue递归的使用
 单页面应用（js渲染）*推荐*
 	优点：页面切换快
 	缺点：首屏事件慢，SEO差
-
-vue项目打包：
-1.
-```bash
-npm run build
-```
-2.打包完成后为 dist 包 也就是要上线的内容，可以放到后台服务器根路径下
-
-
-
-
 
 ## Build Setup
 
