@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="banner" @click="handClickBanner">
-      <img class="banner-img" src="http://p0.meituan.net/deal/1fa88e2ea6042f076ec89b3d688947a0315165.jpg">
+      <img class="banner-img" :src="bannerImg">
       <div class="banner-info">
-        <div class="banner-title">沪上阿姨</div>
-        <div class="banner-number"><span class="iconfont banner-icon">&#xeb9a;</span>2</div>
+        <div class="banner-title">{{this.sightName}}</div>
+        <div class="banner-number"><span class="iconfont banner-icon">&#xeb9a;</span>{{this.imgLength}}</div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="showGallary" @close="handCloseBanner"></common-gallary>
+    <common-gallary :imgs="gallaryImgs" v-show="showGallary" @close="handCloseBanner"></common-gallary>
   </div>
 </template>
 
@@ -37,6 +37,7 @@
         height: .32rem
         padding: 0 .4rem
         margin-top: .14rem
+        margin-right: .2rem
         line-height: .32rem
         border-radius: .2rem
         background: rgba(0, 0, 0, .75)
@@ -49,11 +50,19 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    gallaryImgs: Array,
+    bannerImg: String,
+    sightName: String
+  },
   data () {
     return {
-      showGallary: false,
-      imgs: ['http://p0.meituan.net/deal/1fa88e2ea6042f076ec89b3d688947a0315165.jpg',
-        'http://p0.meituan.net/440.0/dealwatera/31ff8cc1f75f0412e2b0404392c6d2ee211174.jpg']
+      showGallary: false
+    }
+  },
+  computed: {
+    imgLength () {
+      return this.gallaryImgs.length
     }
   },
   components: {

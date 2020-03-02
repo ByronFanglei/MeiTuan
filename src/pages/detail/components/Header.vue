@@ -78,10 +78,10 @@ export default {
       // console.log(document.documentElement.scrollTop)
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScrolle)
   },
-  deactivated () {
+  unmounted () {
     window.removeEventListener('scroll', this.handleScrolle)
   }
 }

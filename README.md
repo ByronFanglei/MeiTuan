@@ -89,19 +89,36 @@ vuex高级用法：
   ...:展开运算符
 
 #### city-keepalive方面
-  localStorage缓存使用类似cookie不会自己消失
-  city页面优化，当选择新城市时才会重新发送ajax否则使用缓存ajax
+1.localStorage缓存使用类似cookie不会自己消失
+2.city页面优化，当选择新城市时才会重新发送ajax否则使用缓存ajax
+3.在*App.vue*添加keepalive会自动添加两个钩子，activated，deactivated，由于keepalive会使用缓存，使用这两个钩子可以做进一步操作
+
 
 #### detail-banner方面
-<font color=#ff6700>存在BUG：</font>
+<font color=#ff6700>存在BUG:</font>
 1.进入美食详情图片后，可以向下滚动
 
 #### detail-header方面
-<font color=#ff6700>存在BUG：</font>
+<font color=#ff6700>存在BUG:(解决)</font>
 1.首页下滑，点击进入详情页面也会下滑
+解决办法：vue-router官网建议代码：
+
+```javaScript
+scrollBehavior (to, from, savedPosition) {
+  return { x: 0, y: 0 }
+}
+```
 
 #### detail-list方面
 vue递归的使用
+
+#### detail-ajax方面
+解决进入美食详情页面路由缓存问题
+```vue
+<keep-alive exclude="Detail">
+</keep-alive>
+```
+但是会引入新的问题，detail-header方面滚动借用keepalive路由产生的两个钩子进行调用函数，所以detail-header页面需要把activated，deactivated两个钩子替换为mounted，unmounted钩子，便解决问题
 
 ## 其他方面
 

@@ -1,25 +1,28 @@
 {
   "ret": true,
   "data": {
-    "sightName": "大连圣亚海洋世界(AAAA景区)",
-    "bannerImg": "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg",
-    "gallaryImgs": ["http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg", "http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png"],
+    "sightName": "沪上阿姨",
+    "bannerImg": "http://p0.meituan.net/deal/1fa88e2ea6042f076ec89b3d688947a0315165.jpg",
+    "gallaryImgs": [
+      "http://p0.meituan.net/deal/1fa88e2ea6042f076ec89b3d688947a0315165.jpg", 
+      "http://p0.meituan.net/440.0/dealwatera/31ff8cc1f75f0412e2b0404392c6d2ee211174.jpg"
+    ],
     "categoryList": [{
-        "title": "成人票",
+        "title": "一人餐",
         "children": [{
-          "title": "成人三馆联票",
+          "title": "一人套餐A",
           "children": [{
-            "title": "成人三馆联票 - 某一连锁店销售"
+            "title": "鱼肉 + 鸡肉"
           }]
         },{
-          "title": "成人五馆联票"
+          "title": "一人套餐B"
         }]
       }, {
-        "title": "学生票"
+        "title": "二人餐"
       }, {
-        "title": "儿童票"
+        "title": "三人餐"
       }, {
-        "title": "特惠票"
+        "title": "四人餐"
       }]
   }
 }
