@@ -60,6 +60,7 @@ export default {
   mounted: function () {
     this.lastCity = this.city
     this.getHomeInfo()
+    document.documentElement.scrollTop = 0
   },
   activated () {
     if (this.lastCity !== this.city) {

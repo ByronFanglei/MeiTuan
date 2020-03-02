@@ -52,6 +52,7 @@ export default {
       swiperOptions: {
         pagination: '.swiper-pagination',
         paginationType: 'fraction',
+        // 重现判断图片宽高距离，可以使swiper正常加载
         observeParents: true,
         observer: true
       }

@@ -73,9 +73,9 @@ css BFC概念
 
 ####  city-components方面
 let && const && var用法：
-（1）const定义的变量不可以修改，而且必须初始化
-（2）var定义的变量可以修改，如果不初始化会输出undefined，不会报错
-（3）let是块级作用域，函数内部使用let定义后，对函数外部无影响
+1.const定义的变量不可以修改，而且必须初始化
+2.var定义的变量可以修改，如果不初始化会输出undefined，不会报错
+3.let是块级作用域，函数内部使用let定义后，对函数外部无影响
 手指滑动逻辑
   *查看代码注释*
   主要参数：
@@ -91,6 +91,15 @@ vuex高级用法：
 #### city-keepalive方面
   localStorage缓存使用类似cookie不会自己消失
   city页面优化，当选择新城市时才会重新发送ajax否则使用缓存ajax
+
+#### detail-banner方面
+<font color=#ff6700>存在BUG：</font>
+1.进入美食详情图片后，可以向下滚动
+
+#### detail-header方面
+<font color=#ff6700>存在BUG：</font>
+1.首页下滑，点击进入详情页面也会下滑
+
 ## 其他方面
 
 多页面应用（返回html）
