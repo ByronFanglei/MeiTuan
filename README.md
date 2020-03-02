@@ -100,6 +100,9 @@ vuex高级用法：
 <font color=#ff6700>存在BUG：</font>
 1.首页下滑，点击进入详情页面也会下滑
 
+#### detail-list方面
+vue递归的使用
+
 ## 其他方面
 
 多页面应用（返回html）
