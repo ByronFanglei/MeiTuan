@@ -12,7 +12,6 @@
       </router-link>
       美食详情
     </div>
-    <div class="one"></div>
   </div>
 </template>
 
@@ -33,6 +32,7 @@
       font-size: .32rem
       color: #fff
   .header-fixed
+    z-index: 2
     position: fixed
     top: 0
     left: 0
@@ -51,8 +51,6 @@
       font-size: .4rem
       text-align: center
       color: $darkFontColor
-  .one
-    height: 50rem
 </style>
 
 <script>
