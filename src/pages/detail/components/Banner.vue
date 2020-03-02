@@ -7,7 +7,13 @@
         <div class="banner-number"><span class="iconfont banner-icon">&#xeb9a;</span>{{this.imgLength}}</div>
       </div>
     </div>
-    <common-gallary :imgs="gallaryImgs" v-show="showGallary" @close="handCloseBanner"></common-gallary>
+    <common-animation>
+      <common-gallary
+        :imgs="gallaryImgs"
+        v-show="showGallary"
+        @close="handCloseBanner">
+      </common-gallary>
+    </common-animation>
   </div>
 </template>
 
@@ -48,6 +54,7 @@
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import CommonAnimation from 'common/animation/Animation'
 export default {
   name: 'DetailBanner',
   props: {
@@ -66,7 +73,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    CommonAnimation
   },
   methods: {
     handClickBanner () {
