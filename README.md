@@ -24,6 +24,7 @@ css BFC概念
 	axios			//vue推荐ajax，可以实现跨平台
 	better-scroll	//页面滑动插件
 	vuex			//数据共享
+	babel-polyfill	//解决白屏（浏览器不支持promise）
 
 ### 单个页面要点内容
 #### index-icons页面
@@ -130,6 +131,12 @@ vue递归的使用
 	优点：页面切换快
 	缺点：首屏事件慢，SEO差
 
+vue项目打包：
+1.
+```bash
+npm run build
+```
+2.打包完成后为 dist 包 也就是要上线的内容，可以放到后台服务器根路径下
 
 
 
