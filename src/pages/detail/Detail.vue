@@ -11,7 +11,11 @@
                     ></detail-Price>
     <detail-appraise  :score="score"
                       :evaluation="evaluation"
-                      :evaluations="evaluations"></detail-appraise>
+                      :evaluations="evaluations"
+                      ></detail-appraise>
+    <detail-merchants :title="title"
+                      :address="address"
+                      ></detail-merchants>
     <div class="contend">
       <detail-list :list="list"></detail-list>
     </div>
@@ -29,6 +33,7 @@ import DetailHeader from './components/Header'
 import DetailList from './components/List'
 import DetailPrice from './components/Price'
 import DetailAppraise from './components/Appraise'
+import DetailMerchants from './components/Merchants'
 import axios from 'axios'
 export default {
   name: 'Detail',
@@ -37,7 +42,8 @@ export default {
     DetailHeader,
     DetailList,
     DetailPrice,
-    DetailAppraise
+    DetailAppraise,
+    DetailMerchants
   },
   data () {
     return {
@@ -51,7 +57,9 @@ export default {
       sales: '',
       score: '',
       evaluation: '',
-      evaluations: []
+      evaluations: [],
+      title: '',
+      address: ''
     }
   },
   methods: {
@@ -78,6 +86,8 @@ export default {
         this.score = data.score
         this.evaluation = data.evaluation
         this.evaluations = data.evaluations
+        this.title = data.title
+        this.address = data.address
       }
     }
   },

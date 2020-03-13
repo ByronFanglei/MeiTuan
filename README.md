@@ -149,6 +149,16 @@ created () { //主要不能用beforeCreate否则id值拿不到
 ```
 但是会引入新的问题，detail-header方面滚动借用keepalive路由产生的两个钩子进行调用函数，所以detail-header页面需要把activated，deactivated两个钩子替换为mounted，unmounted钩子，便解决问题
 
+
+
+#### detail-inner方面
+* 解决文字上下左右居中 flex布局
+```css
+display: flex
+justify-content: center
+align-items: center
+```
+* flex布局下文字隐藏切记需要在父级元素添加：flex:1
 ## 其他方面
 
 多页面应用（返回html）

@@ -72,6 +72,8 @@
         .support-one
           width: 50%
           padding: .1rem 0
+        .support-two
+          color: #999
 </style>
 <script>
 export default {
