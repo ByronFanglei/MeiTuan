@@ -113,6 +113,34 @@ scrollBehavior (to, from, savedPosition) {
 #### detail-list方面
 vue递归的使用
 
+解决点击不同内容加载不同数据
+第一步：通过首页点击获取当前点击的index值
+```vue
+import { mapMutations } from 'vuex'
+methods: {
+    getIndex (index) {
+      // 向vuex传值 
+      // this.$store.commit('changeIndex', index) 这个不用vue高级方法，直接通过commit方法将值传入到Mutations中
+      this.changeIndex(index) //使用vue高级方法省略上面繁琐步骤，进行直接调用
+    },
+    // 将changeIndex映射到mapMutations中可以直接调用
+    ...mapMutations(['changeIndex'])
+  }
+```
+第二步：Mutations.js中进行监听，当调用index改变时对state数据进行修改
+```vue
+changeIndex (state, index) {
+    state.index = index
+  }
+```
+第三步：detail获取对应的id
+```vue
+created () { //主要不能用beforeCreate否则id值拿不到
+    this.id = this.$store.state.index
+  }
+```
+第四步：需要的地方直接获取id注意this的作用域
+
 #### detail-ajax方面
 解决进入美食详情页面路由缓存问题
 ```vue

@@ -5,9 +5,10 @@
       <router-link
           tar="li"
           class="item"
-          v-for="item of list"
+          v-for="(item,index) of list"
           :key="item.id"
           :to="'/detail/' + item.id"
+          @click.native="getIndex(index)"
           >
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
@@ -67,10 +68,19 @@
 </style>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'HomeRecommend',
   props: {
     list: Array
+  },
+  methods: {
+    getIndex (index) {
+      // 向vuex传值
+      // this.$store.commit('changeIndex', index)
+      this.changeIndex(index)
+    },
+    ...mapMutations(['changeIndex'])
   }
 }
 </script>

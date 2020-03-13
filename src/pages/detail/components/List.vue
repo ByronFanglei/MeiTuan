@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="item-all">
     <div class="item" v-for="(item, index) of list" :key="index"  >
       <div class="item-title border-bottom" >
         <span class="iconfont item-icon">&#xeb99;</span>
@@ -14,13 +14,15 @@
 
 <style lang="stylus" scoped>
   @import '~style/varibles.styl'
-  .item-title
-    line-height: .8rem
-    font-size: .32rem
-    padding: 0 .2rem
-    color: $darkFontColor
-  .item-children
-    padding: 0 .2rem
+  .item-all
+    background: #fff
+    .item-title
+      line-height: .8rem
+      font-size: .32rem
+      padding: 0 .2rem
+      color: $darkFontColor
+    .item-children
+      padding: 0 .2rem
 </style>
 
 <script>

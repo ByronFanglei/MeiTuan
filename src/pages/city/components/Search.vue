@@ -104,6 +104,7 @@ export default {
       // this.$store.commit('changeCity', city)
       // vue高级用法
       this.changeCity(city)
+      // 编程式导航
       this.$router.push('/')
       this.keyword = ''
     },

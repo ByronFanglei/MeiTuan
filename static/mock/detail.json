@@ -1,28 +1,217 @@
 {
   "ret": true,
-  "data": {
-    "sightName": "沪上阿姨",
-    "bannerImg": "http://p0.meituan.net/deal/1fa88e2ea6042f076ec89b3d688947a0315165.jpg",
-    "gallaryImgs": [
-      "http://p0.meituan.net/deal/1fa88e2ea6042f076ec89b3d688947a0315165.jpg", 
-      "http://p0.meituan.net/440.0/dealwatera/31ff8cc1f75f0412e2b0404392c6d2ee211174.jpg"
-    ],
-    "categoryList": [{
-        "title": "一人餐",
-        "children": [{
-          "title": "一人套餐A",
-          "children": [{
-            "title": "鱼肉 + 鸡肉"
-          }]
-        },{
-          "title": "一人套餐B"
-        }]
-      }, {
-        "title": "二人餐"
-      }, {
-        "title": "三人餐"
-      }, {
-        "title": "四人餐"
-      }]
-  }
+  "data": [
+    {
+      "id": "001",
+      "sightName": "酒鬼爱烤鸡架",
+      "bannerImg": "http://p0.meituan.net/deal/ec13bc77584009d04aac683494b2f73760915.jpg",
+      "gallaryImgs": [
+        "http://p0.meituan.net/deal/ec13bc77584009d04aac683494b2f73760915.jpg",
+        "http://p0.meituan.net/440.0/dealwatera/ce1feb5d436ca3f199f930767d6b0d5674569.jpg"
+      ],
+      "price": "9.9",
+      "oldPrice": "12",
+      "sales": "199",
+      "score": "44",
+      "evaluation": "9",
+      "evaluations": ["服务热情","味道赞","到店自提"],
+      "categoryList": [
+        {
+          "title": "一人餐",
+          "children": [
+            {
+              "title": "一人套餐A",
+              "children": [
+                {
+                  "title": "鱼肉 + 鸡肉"
+                }
+              ]
+            },
+            {
+              "title": "一人套餐B"
+            }
+          ]
+        },
+        {
+          "title": "二人餐"
+        },
+        {
+          "title": "三人餐"
+        },
+        {
+          "title": "四人餐"
+        }
+      ]
+    },
+    {
+      "id": "002",
+      "sightName": "掉香缘掉渣饼",
+      "bannerImg": "http://p1.meituan.net/deal/7fa4d4497aab7b81ced0d3081616e77262464.jpg",
+      "gallaryImgs": [
+        "http://p1.meituan.net/deal/7fa4d4497aab7b81ced0d3081616e77262464.jpg"
+      ],
+      "price": "7.9",
+      "oldPrice": "10",
+      "sales": "36360",
+      "score": "43",
+      "evaluation": "1299",
+      "evaluations": ["味道赞","价格实惠","性价比高","回头客","服务热情","上菜快","菜品不错","分量足","肉类差","到店自提"],
+      "categoryList": [
+        {
+          "title": "一人餐",
+          "children": [
+            {
+              "title": "一人套餐A",
+              "children": [
+                {
+                  "title": "鱼肉 + 鸡肉"
+                }
+              ]
+            },
+            {
+              "title": "一人套餐B"
+            }
+          ]
+        },
+        {
+          "title": "二人餐"
+        },
+        {
+          "title": "三人餐"
+        },
+        {
+          "title": "四人餐"
+        }
+      ]
+    },
+    {
+      "id": "003",
+      "sightName": "郑大烤冷面",
+      "bannerImg": "http://p1.meituan.net/deal/c67f16980a3298696b22ea3467b86622159728.jpg",
+      "gallaryImgs": [
+        "http://p1.meituan.net/deal/c67f16980a3298696b22ea3467b86622159728.jpg"
+      ],
+      "price": "8.8",
+      "oldPrice": "12",
+      "sales": "397",
+      "score": "42",
+      "evaluation": "29",
+      "evaluations": ["味道赞","价格实惠","干净整洁","回头客","服务热情","上菜快","菜品健康","分量足","肉类差","到店自提"],
+      "categoryList": [
+        {
+          "title": "一人餐",
+          "children": [
+            {
+              "title": "一人套餐A",
+              "children": [
+                {
+                  "title": "鱼肉 + 鸡肉"
+                }
+              ]
+            },
+            {
+              "title": "一人套餐B"
+            }
+          ]
+        },
+        {
+          "title": "二人餐"
+        },
+        {
+          "title": "三人餐"
+        },
+        {
+          "title": "四人餐"
+        }
+      ]
+    },
+    {
+      "id": "004",
+      "sightName": "东来顺",
+      "bannerImg": "http://p0.meituan.net/deal/6084663428eb1fbe148a06306cce44b498695.jpg",
+      "gallaryImgs": [
+        "http://p0.meituan.net/deal/6084663428eb1fbe148a06306cce44b498695.jpg",
+        "http://p1.meituan.net/440.0/dealwaterb/4eea58bc0e0c0cd899584493bfdcfbe766046.jpg",
+        "http://p1.meituan.net/440.0/dealwaterb/9cdeb66d9f7d7599ef1034ed7d89335037993.jpg",
+        "http://p1.meituan.net/440.0/dealwaterb/3e334d53050396fcdf66931aec1b8b2a52823.jpg",
+        "http://p0.meituan.net/440.0/dealwaterb/bb80900f2221ee518c32fcdcf4e68fa840971.jpg",
+        "http://p1.meituan.net/440.0/dealwaterb/c11aff477a94c8e6f8a382689817678147122.jpg"
+      ],
+      "price": "129",
+      "oldPrice": "381",
+      "sales": "46290",
+      "score": "41",
+      "evaluation": "5218",
+      "evaluations": ["菜品精致","上菜快","交通便利","海鲜棒","冬天吃过瘾","朋友聚餐","菜品不错","分量足","肉类差","到店自提"],
+      "categoryList": [
+        {
+          "title": "一人餐",
+          "children": [
+            {
+              "title": "一人套餐A",
+              "children": [
+                {
+                  "title": "鱼肉 + 鸡肉"
+                }
+              ]
+            },
+            {
+              "title": "一人套餐B"
+            }
+          ]
+        },
+        {
+          "title": "二人餐"
+        },
+        {
+          "title": "三人餐"
+        },
+        {
+          "title": "四人餐"
+        }
+      ]
+    },
+    {
+      "id": "005",
+      "sightName": "北京全聚德",
+      "bannerImg": "http://p0.meituan.net/deal/f38a659eb827ed9571deddb74db2f388142809.jpg",
+      "gallaryImgs": [
+        "http://p0.meituan.net/440.0/dealwatera/06b1371dacdc3418a4e82826c30f67d760653.jpg",
+        "http://p1.meituan.net/440.0/dealwatera/e91daa8d740811dfc7eba0226928b55662822.jpg"
+      ],
+      "price": "458",
+      "oldPrice": "573",
+      "sales": "6305",
+      "score": "38",
+      "evaluation": "752",
+      "evaluations": ["味道赞","肉类好","性价比高","店内消毒","服务热情","上菜快","菜品不错","分量足","肉类差","到店自提"],
+      "categoryList": [
+        {
+          "title": "一人餐",
+          "children": [
+            {
+              "title": "一人套餐A",
+              "children": [
+                {
+                  "title": "鱼肉 + 鸡肉"
+                }
+              ]
+            },
+            {
+              "title": "一人套餐B"
+            }
+          ]
+        },
+        {
+          "title": "二人餐"
+        },
+        {
+          "title": "三人餐"
+        },
+        {
+          "title": "四人餐"
+        }
+      ]
+    }
+  ]
 }

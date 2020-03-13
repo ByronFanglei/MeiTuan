@@ -11,6 +11,9 @@
         <div class="iconfont headericon">&#xeb99;</div>
       </router-link>
       美食详情
+      <router-link to="/">
+        <div class="iconfont headericon-right">&#xe615;</div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -47,6 +50,14 @@
       position: absolute
       top: 0
       left: 0
+      width: .88rem
+      font-size: .4rem
+      text-align: center
+      color: $darkFontColor
+    .headericon-right
+      position: absolute
+      top: 0
+      right: 0
       width: .88rem
       font-size: .4rem
       text-align: center
