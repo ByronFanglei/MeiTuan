@@ -16,9 +16,15 @@
     <detail-merchants :title="title"
                       :address="address"
                       ></detail-merchants>
+    <detail-buyinfo></detail-buyinfo>
     <div class="contend">
       <detail-list :list="list"></detail-list>
     </div>
+    <detail-comments  :comments="comments"
+                      :score="score"
+                      :address="address"
+                      ></detail-comments>
+    <home-bottom></home-bottom>
   </div>
 </template>
 
@@ -34,6 +40,10 @@ import DetailList from './components/List'
 import DetailPrice from './components/Price'
 import DetailAppraise from './components/Appraise'
 import DetailMerchants from './components/Merchants'
+import DetailBuyinfo from './components/Buyinfo'
+import DetailComments from './components/Comments'
+import HomeBottom from '../home/components/Bottom'
+
 import axios from 'axios'
 export default {
   name: 'Detail',
@@ -43,7 +53,10 @@ export default {
     DetailList,
     DetailPrice,
     DetailAppraise,
-    DetailMerchants
+    DetailMerchants,
+    DetailBuyinfo,
+    DetailComments,
+    HomeBottom
   },
   data () {
     return {
@@ -59,7 +72,8 @@ export default {
       evaluation: '',
       evaluations: [],
       title: '',
-      address: ''
+      address: '',
+      comments: []
     }
   },
   methods: {
@@ -88,6 +102,7 @@ export default {
         this.evaluations = data.evaluations
         this.title = data.title
         this.address = data.address
+        this.comments = data.comments
       }
     }
   },

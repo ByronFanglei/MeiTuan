@@ -16,6 +16,7 @@
   @import '~style/varibles.styl'
   .item-all
     background: #fff
+    margin-bottom: .2rem
     .item-title
       line-height: .8rem
       font-size: .32rem

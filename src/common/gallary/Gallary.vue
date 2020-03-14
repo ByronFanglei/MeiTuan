@@ -1,6 +1,6 @@
 <template>
   <div class="gallary" @click="handClosebanner">
-    <div class="warpper">
+    <div class="warpper" @touchmove.prevent>
       <swiper :options="swiperOptions">
         <swiper-slide v-for="(item, index) of imgs" :key="index">
           <img class="gallary-img" :src="item">

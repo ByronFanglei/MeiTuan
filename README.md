@@ -159,6 +159,17 @@ justify-content: center
 align-items: center
 ```
 * flex布局下文字隐藏切记需要在父级元素添加：flex:1
+* img标签绑定属性时切记---:src="item.image"  //不加双花括号
+* for循环中若想引入常量需要进行绑定才可使用
+```vue
+<div  v-for="(item,index) of comments" :key="index" :address="address">
+  <div>{{address}}</div>
+</div>
+```
+<font color=#ff6700>存在BUG:</font>
+1.用户个人星星显示逻辑不清楚
+
+
 ## 其他方面
 
 多页面应用（返回html）

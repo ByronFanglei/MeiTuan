@@ -5,8 +5,8 @@
       <button class="button">注册</button>
       <div class="bottom-city">
         城市:
-        <span class="iconfont button-icon">&#xe615;</span>
-        北京
+        <span class="iconfont buttom-icon">&#xe615;</span>
+        {{this.city}}
       </div>
     </div>
     <div class="bottom-two">
@@ -38,7 +38,7 @@
 <style lang="stylus" scoped>
   @import '~style/varibles.styl'
   .bottom
-    margin: .2rem 0 0 .2rem
+    background: #fff
     .bottom-one
       padding: .3rem 0 .4rem .3rem
       .bottom-city
@@ -46,6 +46,8 @@
         float: right
         margin-right: .4rem
         line-height: .64rem
+        .buttom-icon
+          color: $starColor
       .button
         font-size: .26rem
         width:1.1rem
@@ -109,7 +111,11 @@
 </style>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  name: 'HomeBottom'
+  name: 'HomeBottom',
+  computed: {
+    ...mapState(['city'])
+  }
 }
 </script>
