@@ -10,7 +10,7 @@
         <span class="comments-one-star-score">{{setScore}}分</span>
       </div>
     </div>
-    <div class="comments-two border-bottom" v-for="(item,index) of comments" :key="index" :address="address">
+    <div class="comments-two border-bottom" v-for="(item,index) of comments" :key="index" :address="address" :resultStar="resultStar">
       <div class="comments-two-user">
         <div class="comments-two-user-img">
           <img :src="item.userImg" class="comments-two-user-img-inner" />
@@ -18,13 +18,9 @@
         <div class="comments-two-user-text">
           <div>{{item.userName}}</div>
           <div class="comments-two-user-star">
-            <div>
-              <span class="iconfont">&#xe607;</span>
-              <span class="iconfont">&#xe607;</span>
-              <span class="iconfont">&#xe607;</span>
-              <span class="iconfont">&#xe607;</span>
-              <span class="iconfont">&#xe607;</span>
-              <!-- <span class="iconfont" v-else>&#xe621;</span> -->
+            <div v-for="(item,index) of resultStar[index]" :key="index">
+              <span class="iconfont" v-if="item">&#xe607;</span>
+              <span class="iconfont" v-else>&#xe621;</span>
             </div>
             <span class="comments-two-user-star-time">{{item.commentTime}}</span>
           </div>
@@ -142,6 +138,29 @@ export default {
         }
       }
       return starArr
+    },
+    resultStar () {
+      var starsArr = []
+      var comments = this.comments
+      for (let i = 0; i < comments.length; i++) {
+        starsArr.push(comments[i].userStar)
+      }
+      var userStarsArr = []
+      for (let i = 0; i < starsArr.length; i++) {
+        var num = starsArr[i].substring(0, 1)
+        for (let i = 0; i < 5; i++) {
+          if (num > i) {
+            userStarsArr.push(1)
+          } else {
+            userStarsArr.push(0)
+          }
+        }
+      }
+      var result = []
+      for (let i = 0; i < userStarsArr.length; i += 5) {
+        result.push(userStarsArr.slice(i, i + 5))
+      }
+      return result
     }
   }
 }

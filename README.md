@@ -166,8 +166,16 @@ align-items: center
   <div>{{address}}</div>
 </div>
 ```
-<font color=#ff6700>存在BUG:</font>
+<font color=#ff6700>存在BUG:(解决)</font>
 1.用户个人星星显示逻辑不清楚
+* 解决方案：eg 页面两个用户 分数分别为 35，50
+>1：获取当前页面所有用户星星分数并且push到一个数组中	["35", "50"]
+>2：for循环获取每个分数的十位	3	5
+>3：再利用for循环将获取值push到一个数组中	[1, 1, 1, 0, 0, 1, 1, 1, 1, 1]
+>3：利用数组的方法slice切割数组	0: (5) [1, 1, 1, 0, 0]	1: (5) [1, 1, 1, 1, 1]
+>4：循环用户获取computed中的值	:resultStar="resultStar"
+>5：星星标签中设置v-for="(item,index) of resultStar[index]" index为当前第几个用户
+>6：循环星星标签即可
 
 
 ## 其他方面
